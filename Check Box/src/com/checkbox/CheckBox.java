@@ -32,7 +32,7 @@ public class CheckBox
 		
 		driver.manage().window().maximize();
 		driver.navigate().to("https://testautomationpractice.blogspot.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));	
 	}
 	
 	
@@ -43,7 +43,7 @@ public class CheckBox
 		
 		for(WebElement element : allCheckBoxes)
 		{
-			element.click();
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			if(element.isSelected())
 			{
 				System.out.println(element.getAttribute("value") + " : is Selected");
