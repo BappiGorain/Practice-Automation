@@ -26,7 +26,7 @@ public class LoginPageTest extends BaseClass
     }
 
     @Test
-    public void validLogin()
+    public void Login()
     {
         loginPage.login(ConfigDataProvider.getValidEmail(),
                         ConfigDataProvider.getValidPassword());
